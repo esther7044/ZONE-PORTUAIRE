@@ -1,0 +1,196 @@
+@font-face {
+    font-family: candice;
+    src: url(../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: font;
+    src: url(../fonts/Bungee_Spice/BungeeSpice-Regular.ttf);
+}
+@font-face {
+    font-family: anime;
+    src: url(../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cool;
+    src: url(../fonts/Special_Elite/SpecialElite-Regular.ttf);
+}
+
+ @mixin Content($height:80px, $width:100%,$bgc:white,$justifyContent:space-around,)  {
+    display: flex;
+    height: $height;
+    width: $width;
+    background-color: $bgc;
+    justify-content: $justifyContent;
+    align-items:center;
+   }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    @include Content(70px,100%, );
+    .infos{
+        @include Content(60px,100%,rgba(57, 57, 240, 0.599) );
+    }
+    section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    p{
+        font-family: candice;
+        font-weight: bold;
+        font-size: large;
+    }
+   button{
+    border: none;
+    height: 50px;
+    width: 100px;
+    background-color:tomato;
+    &:hover{
+        background-color:beige;
+       
+    }
+}
+}
+
+       
+    
+.Information{
+    @include Content(80px,100%,white , );
+    position: fixed;
+    z-index: 2;
+    section{
+        @include Content(80px,100px,white ,space-between );
+        gap: 20px;
+        font-family: font;  
+    }
+    img{
+        height: 70px;
+        width: 80px;
+        border: 3px solid orange;
+        border-radius: 80%;
+    }
+    ul{
+        @include Content(80px,100% ,white,baseline );
+        list-style-type: none;
+        color: blueviolet;
+        gap: 40px;
+        font-family:anime;
+        font-weight: bold;
+        .link{
+           font-weight: lighter;
+        }
+        a{
+            &:hover{
+                color:red;
+            }
+        } 
+    }
+}
+
+.presentation{
+    @include Content(200px,100% ,rgba(57, 57, 240, 0.599) , );
+    position: absolute;
+    top: 160px;
+    h1{
+        color: white;
+        font-family: cool;
+        border-bottom: 2px solid white;
+        font-size: 50px;
+    }
+}
+.texte{
+    @include Content(600px,100%,white, space-around);
+    position: absolute;
+    top: 350px;
+    h4{
+        font-family: font;
+        font-size: 50px;
+    }
+    img{
+        height: 400px;
+        width: 600px;
+    }
+}  
+.service{
+    @include Content(900px,100% ,whitesmoke , );
+    position: absolute;
+    top: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    img{
+        height: 300px;
+        width: 300px;
+    }
+    h4{
+        font-family: anime;
+        font-size: 30px;
+        color: chocolate;
+    }
+    p{
+        font-family: cool;
+        font-size: 20px;
+        color: chocolate;
+        font-weight: bold
+    }
+    .box1{
+        @include Content(300px,100%  , whitesmoke);
+        
+    }
+    .box2{
+        @include Content(300px,100%,whitesmoke );
+        
+    }
+    
+}
+.card{
+    @include Content(200px,100% , );
+    position: absolute;
+    top: 250%;
+    h6{
+        font-family: candice;
+        font-size: 30px;
+        color: bisque;
+    }
+    img{
+        height: 50px;
+        width: 50px;
+        color:rgb(30, 30, 168); 
+    }
+    span{
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    p{
+        font-size: 20px;
+    }
+    &__1{
+        @include Content(200px,30% ,rgb(30, 30, 168) , );
+       
+    }
+    &__2{
+        @include Content(200px,70% ,chocolate );
+    }
+
+}
+footer{
+    @include Content(80px,100% ,darkblue , );
+    position: absolute;
+    top: 275%;
+    h4{
+        color: beige;
+        font-family: anime;
+        font-size: 20px;
+    }
+    p{
+        color: white;
+    }
+}
